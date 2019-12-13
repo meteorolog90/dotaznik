@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Dotáznik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+    
+  <img src="https://publicdomainvectors.org/photos/eco_green_house_3.png" alt="Avatar" style="width:10%" >
+  <img src="https://publicdomainvectors.org/photos/eco_gsagri4_green_house.png" alt="Avatar" style="width:10%"> 
+  <div class="w3-panel w3-border-top w3-border-bottom">
+  <div class="w3-container w3-flat-silver">
+  <h1>Naším cieľom je vypočítať energetickú spotrebu domácností a doplniť štatistické výkazy za Slovensko. </h1>
+  <h1>Vami poskytnuté informácie nám pomôžu nastaviť podmienky na zlepšenie energetickej efektívnosti.</h1>
+  <h1>Štatistika domácností je v súčasnosti na nevyhovujúcej úrovni a tento prieskum je jedným z krokov k jej zlepšeniu. </h1>
+  <h1> Odhady emisií z domácností sú súčasťou emisných inventúr, ktoré každoročne reportuje odbor Emisie a biopalivá a pre ich účely sú nevyhnutné kvalitné vstupné údaje. </h1> 
+  </div>
+  </div>
+  <!-- <img src="https://publicdomainvectors.org/photos/eco_gsagri4_green_house.png" alt="Avatar" style="width:10%">     -->
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-xlarge">Dotáznik</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+  
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        <!-- <img src="https://publicdomainvectors.org/photos/eco_systemedic_energy_A-2.png" alt="Avatar" style="width:20%" class="w3-circle w3-margin-top"> -->
+        <img src="https://publicdomainvectors.org/photos/JPortugall_icon_bus_bar.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+      </div>
+
+      <form class="w3-container"  method="POST" action="/post_user">
+        <!-- <p>Energetická bilancia domácností - elektrina</p> -->
+        <div class="w3-section">
+                <label>Domácnosť</label>     
+                <select class="w3-select" id="domacnost" name="domacnost" type="text"  required>
+                    <option value="rodinny dom">Rodinný dom</option>
+                    <option value="bytový dom">Bytový dom</option>
+                </select>
+
+                <label>Priemerna ročná spotreba elektriny</label>      
+                <input class="w3-input" id="spotreba" name="spotreba" type="number" aria-valuemin="500" value="1000" required>
+
+                <label>Okres v ktorom žijete</label>
+                    <select  class= "w3-select" id='okres' name="okres" required>
+                        <option value="Bratislava">Bratislava </option>
+                        <option value="Senec">Senec</option>
+                        <option value="Malacky">Malacky</option>
+                        <option value="Trenčín">Trenčín</option>
+                        <option value="Prievidza">Prievidza</option>
+                        <option value="Nitra">Nitra</option>
+                        <option value="Bánovce nad Beravou">Bánovce nad Beravou</option>
+                        <option value="Banská Bystrica">Banská Bystrica</option>
+                        <option value="Banská štiavnica">Banská štiavnica</option>
+                        <option value="Bardejov">Bardejov</option>
+                        <option value="Brezno">Brezno</option>
+                        <option value="čadca">čadca</option>
+                        <option value="Nitra">Nitra</option>
+                        <option value="Nitra">Nitra</option>
+                        <option value="Nitra"></option>
+
+                    </select>
+                    
+        </div>
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                <button type="submit" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">uložiť dáta</button>
+        </div>
+      </form>
+
+      
+
+    </div>
+  </div>
+</div>
+            
+</body>
+</html>

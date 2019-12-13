@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title></title>
+  </head>
+  <body>
+   
+    <div class="w3-row-padding">
+            
+            <div class="w3-half">
+            <form class="w3-container w3-card-4" method="POST" action="/post_user">
+            <h1>Energetická bilancia domácností - elektrina</h1>
+            <div class="w3-section">
+                <label>Domácnosť</label>     
+                <select class="w3-select" id="domacnost" name="domacnost" type="text"  required>
+                    <option value="rodinny dom">Rodinný dom</option>
+                    <option value="bytový dom">Bytový dom</option>
+                </select>
+            </div>
+
+              <div class="w3-section">
+                <label>Priemerna ročná spotreba elektriny</label>      
+                <input class="w3-input" id="spotreba" name="spotreba" type="number" aria-valuemin="500" value="1000" required>
+              </div>
+
+              <div class="w3-section">  
+                    <label>Okres v ktorom žijete</label>
+                    <select  class= "w3-select" id='okres' name="okres" required>
+                        <option value="Bratislava">Bratislava </option>
+                        <option value="Nitra">Nitra</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            
+            </form>
+            </div>
+        </div>
+
+  </body>
+</html>
